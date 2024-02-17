@@ -13,6 +13,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_predict
 from sklearn.model_selection import cross_val_score
 from streamlit_option_menu import OptionMenu
+import matplotlib
+matplotlib.use("Agg")  # Menggunakan mode tanpa GUI untuk Matplotlib
+import matplotlib.pyplot as plt
+
 
 # Data Wrangling
 
