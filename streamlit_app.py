@@ -81,4 +81,4 @@ sns.pointplot(data=df_data_hour[['hour',
               hue='weekday',
               ax=ax)
 ax.set(title="Distribusi hitungan per jam pada hari kerja")
-plt.show()ungan per jam pada hari kerja")
+plt.show()
