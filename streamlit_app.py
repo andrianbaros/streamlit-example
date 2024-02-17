@@ -2,21 +2,8 @@ import pandas as pd
 import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-import statsmodels.api as sm
-
-from factor_analyzer import FactorAnalyzer
-from sklearn import metrics
-from sklearn import preprocessing
-from sklearn import linear_model
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_predict
-from sklearn.model_selection import cross_val_score
-from streamlit_option_menu import OptionMenu
 import matplotlib
 matplotlib.use("Agg")  # Menggunakan mode tanpa GUI untuk Matplotlib
-import matplotlib.pyplot as plt
-
 
 # Data Wrangling
 
