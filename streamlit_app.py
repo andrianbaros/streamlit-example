@@ -17,22 +17,24 @@ from sklearn.model_selection import cross_val_score
 from streamlit_option_menu import option_menu
 
 #load data
-@st.cache_data
-def load_data(url) : 
-pd.read_csv('hour.csv')
-pd.read_csv('day.csv')
+@st.cache
+def load_data(url):
+    df_hour = pd.read_csv(url)
+    return df_hour
+
+# Load data
+df_data_hour = load_data('hour.csv')
+df_data_day = load_data('day.csv')
 
 #mengakses data
-df_data_hour.info()
-df_data_hour.isnull().sum()
+st.write(df_data_hour.info())
+st.write(df_data_hour.isnull().sum())
 
 #cleaning data
 df_data_hour = df_data_hour.dropna(how='any',axis=0)
-
-print("Null values removed successfully.")
-
-df_data_hour.isnull().sum()
-df_data_hour.duplicated().any()
+st.write("Null values removed successfully.")
+st.write(df_data_hour.isnull().sum())
+st.write(df_data_hour.duplicated().any())
 
 #explore data
 df_data_hour.rename(columns={'instant':'rec_id',
@@ -79,3 +81,4 @@ sns.pointplot(data=df_data_hour[['hour',
               hue='weekday',
               ax=ax)
 ax.set(title="Distribusi hitungan per jam pada hari kerja")
+plt.show()ungan per jam pada hari kerja")
